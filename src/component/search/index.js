@@ -19,7 +19,7 @@ export default class MySearch extends React.Component{
     handlerClickSearch = (value)=>{
         console.log('搜索的信息为:',value);
         let self = this;
-        axios.get('http://10.10.10.231:8080/solr/description', {
+        axios.get('http://10.10.10.226:8001/spring-boot-solr-0.0.1-SNAPSHOT/solr/description', {
             params: {
               keyword: value,
               pageNum: 0,
