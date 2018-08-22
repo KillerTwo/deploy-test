@@ -1,7 +1,8 @@
 import React from 'react'
-import { Row, Col, Divider, Icon } from 'antd';
+import { Row, Col, Divider } from 'antd';
 import MySearch from '../component/search';
 import MyContent from '../component/content';
+import { Link } from 'react-router-dom';
 export default class Home extends React.Component{
     constructor(props) {
         super(props);
@@ -33,9 +34,13 @@ export default class Home extends React.Component{
                 
                 <Row>
                     <Col span={16} offset={4}>
+                        
                         <MyContent contentData={this.state.data}/>
+                        
+                        
                     </Col>
-                </Row>
+                </Row> 
+
             </div>
             
         );
