@@ -1,5 +1,5 @@
 export default class MyConfig{
-    static searchUrl = 'http://127.0.0.1:8080/solr/description'
+    static searchUrl = 'http://10.10.10.226:8001/spring-boot-solr-0.0.1-SNAPSHOT/solr/description'
      constructor() {
          console.log(this.searchUrl);
      }
