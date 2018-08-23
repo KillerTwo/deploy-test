@@ -15,7 +15,7 @@ export default class MyRouter extends React.Component{
            <Router>
                <App>
                 <Switch>
-                    <Route path='/detail/:id' component={AllContent}/>
+                    <Route path='/detail' component={AllContent}/>
                     <Route path='/' component={Home}/>
                 </Switch>  
                </App>

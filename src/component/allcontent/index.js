@@ -13,16 +13,13 @@ export default class AllContent extends React.Component{
             <div>
                 <Row>
                     <Col span={16} offset={4}>
-                        <Divider>With Text</Divider>
+                        <Divider>详情</Divider>
                         <p>{this.props.match.params.id}</p>
                         <p>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. Sed nonne 
-                            merninisti licere mihi ista probare, quae
-                             sunt a te dicta? Refert tamen, quo modo.
+                            {this.props.location.state.content}
                         </p>
                         <p>
-                            {this.props.content}
+                            
                         </p>
                     </Col>
                 </Row>
