@@ -2,8 +2,10 @@ import React from 'react';
 import {
     HashRouter as Router,
     Route,
-    Switch
-} from 'react-router-dom'
+    Switch,
+    Redirect
+} from 'react-router-dom';
+import LiveRoute from 'react-live-route';
 import AllContent from '../component/allcontent';
 import Home from '../page/home';
 import App from '../App';
@@ -14,10 +16,20 @@ export default class MyRouter extends React.Component{
         return (
            <Router>
                <App>
-                <Switch>
+                {/* <Switch>
                     <Route path='/detail' component={AllContent}/>
                     <Route path='/' component={Home}/>
-                </Switch>  
+                </Switch>   */}
+                    
+                    
+                    <LiveRoute path="/search" livePath="/detail" component={Home} ></LiveRoute>  
+                    <LiveRoute path="/detail" component={AllContent} ></LiveRoute> 
+                     {/* 不加Switch，在重定向路由时会出现警告 */}
+                    <Switch>
+                        <Route exact path='/'  >
+                            <Redirect to="/search" />
+                        </Route>
+                    </Switch>
                </App>
            </Router>
             
